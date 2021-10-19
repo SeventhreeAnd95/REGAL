@@ -151,6 +151,7 @@ include "config.php";
                 <li class="nav-item"><a class="nav-link" href="faq.php">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link" href="Google_Login.php" data-toggle="modal" data-target="#myModal">Google Login</a>
                 <li class="nav-item"><a class="nav-link" href="Signup.php">Signup</a></li>
+                <li class="nav-item"><a class="nav-link" href="Login.php">Login</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog-home.php">Blog</a></li>      
             </ul>
         </div>
