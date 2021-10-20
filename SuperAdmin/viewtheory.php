@@ -120,10 +120,10 @@
                                 <?php echo $rowsql['sub_topic'];?>
                                 </h2>
                             </th>
-                            <th><button type="button" id="theorybtn" onclick="opentheory('<?php echo $rwsql['subtopicid']; ?>')">View Theory</button></th>
+                            <th><button class="btn btn-primary" type="button" id="theorybtn" onclick="opentheory('<?php echo $rwsql['subtopicid']; ?>')">View Theory</button></th>
 
-                            <th><button onclick="editmodal('<?php echo $rwsql['subtopicid']; ?>')">Edit</button></th>
-                            <th><button onclick="deletequestion('<?php echo $rwsql['subtopicid'];?>')">Delete</button></th>
+                            <th><button class="btn btn-secondary" onclick="editmodal('<?php echo $rwsql['subtopicid']; ?>')">Edit</button></th>
+                            <th><button class="btn btn-danger" onclick="deletequestion('<?php echo $rwsql['subtopicid'];?>')">Delete</button></th>
                         </tr>
                         <?php
                         $i++;

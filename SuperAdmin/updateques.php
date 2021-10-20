@@ -40,8 +40,8 @@ $res=mysqli_query($con,$query);
         echo '<td>'.$row["opt_d"].'</td>';
         echo '<td>'.$row["correct_ans"].'</td>';
         echo '<td>'.$row['explanation'].'</td>';
-        echo'<td><button onclick="editmodal()">Edit</button>&emsp;
-                <button onclick="delques()">Delete</button></td>';
+        echo'<td><button class="btn btn-secondary" onclick="editmodal()">Edit</button>&emsp;
+                <button class="btn btn-danger" onclick="delques()">Delete</button></td>';
          echo'</tr>';
         
     }

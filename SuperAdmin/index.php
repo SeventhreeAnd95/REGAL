@@ -71,7 +71,7 @@ include"../config.php";
                
                 <div class="container" >
                 <div class="container" style="margin-top:-50px; background-color: #d2d2d2; padding:3px; width:50%">
-                    <label for=""><b>Admin Login</b></label>
+                    <label for=""><b>SuperAdmin Login</b></label>
                 </div>
                 
                     <input type="text" placeholder="Enter Email Id" name="Email_ID" required><br>

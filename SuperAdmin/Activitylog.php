@@ -41,6 +41,9 @@ include "../config.php";
 .centred-button i{
     margin-right:10px;
 }
+.centred-button .btn {
+  margin-left:330px;
+}
 .card-body .row{
     margin:50px;
 }
