@@ -30,15 +30,15 @@ include '../config.php'
       height: 170px;
     }
     /* Hide scrollbar for Chrome, Safari and Opera */
-.sidebar::-webkit-scrollbar {
-  display: none;
-}
+      .sidebar::-webkit-scrollbar {
+        display: none;
+      }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.sidebar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .sidebar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
   </style>
 </head>
 
