@@ -65,21 +65,21 @@ include("../config.php");
                text-align: center;
            }
              /* Hide scrollbar for Chrome, Safari and Opera */
-.main-panel::-webkit-scrollbar {
-  display: none;
-}
+            .main-panel::-webkit-scrollbar {
+            display: none;
+            }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.main-panel {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+            /* Hide scrollbar for IE, Edge and Firefox */
+            .main-panel {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            }
 
-.d-flex a{
-    text-decoration:none; 
-    color:#333;
-}
-        
+            .d-flex a{
+                text-decoration:none; 
+                color:#333;
+            }
+                    
     </style>
   </head>
   <body>
@@ -91,57 +91,107 @@ include("../config.php");
                             <?php include("Navigation1.php"); ?>
                             <!-- End Navbar -->
                             <div class="content">
-                                                    <div class="container">
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                <div class="card">
-                                                                    <div class="card-body">
-                                                                        <h5 class="card-title">Hours Practiced</h5>
-                                                                        <p class="card-text"><?php
-                                                                                $sql = "select COUNT(can_id) registered_users from regal_can_details";
-                                                                                $result = mysqli_query($con, $sql) or die ("Query error!");
-                                                                                while ($row = mysqli_fetch_array($result)) {
-                                                                                    $var = $row['registered_users'];
-                                                                                    echo " " .$var. " ";
-                                                                                }
-                                                                                ?></p>
-                                                                        
-                                                                    </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col">
-                                                                <div class="card">
-                                                                    <div class="card-body">
-                                                                        <h5 class="card-title">Total Questions Answered</h5>
-                                                                        <p class="card-text"><?php
-                                                                                $sql = "select COUNT(can_id) registered_users from regal_can_details";
-                                                                                $result = mysqli_query($con, $sql) or die ("Query error!");
-                                                                                while ($row = mysqli_fetch_array($result)) {
-                                                                                    $var = $row['registered_users'];
-                                                                                    echo " " .$var. " ";
-                                                                                }
-                                                                                ?></p>
-                                                                        
-                                                                    </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col">
-                                                                <div class="card" >
-                                                                        <div class="card-body">
-                                                                            <h5 class="card-title">Mock test Failed</h5>
-                                                                            <p class="card-text"><?php
-                                                                                    $sql = "select COUNT(can_id) registered_users from regal_can_details";
-                                                                                    $result = mysqli_query($con, $sql) or die ("Query error!");
-                                                                                    while ($row = mysqli_fetch_array($result)) {
-                                                                                        $var = $row['registered_users'];
-                                                                                        echo " " .$var. " ";
-                                                                                    }
-                                                                                    ?></p>
-                                                                            
-                                                                        </div>
-                                                                        </div>
-                                                                </div>
-                                                            </div>
+                                    <div class="container">
+                                    <div class="row" id="Statistics">
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="card card-stats">
+                                        <div class="card-body ">
+                                            <div class="row">
+                                            <div class="col-5 col-md-4">
+                                                <div class="icon-big text-center icon-warning">
+                                                <i class="fas fa-globe"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-7 col-md-8">
+                                                <div class="numbers">
+                                                <p class="card-category">Users registered</p>
+                                                <p class="card-title"><?php
+                                                    $sql = "select COUNT(can_id) registered_users from regal_can_details";
+                                                    $result = mysqli_query($con, $sql) or die ("Query error!");
+                                                    while ($row = mysqli_fetch_array($result)) {
+                                                        $var = $row['registered_users'];
+                                                        echo " " .$var. " ";
+                                                    }
+                                                    ?><p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-6">
+                                            <div class="card card-stats">
+                                            <div class="card-body ">
+                                                <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                    <p class="card-category">Total questions</p>
+                                                    <p class="card-title"><?php
+                                                        $sqi = "select COUNT(id) registered_users from regal_questions_list ";
+                                                        $results = mysqli_query($con, $sqi) or die ("Query error!");
+                                                        while ($row = mysqli_fetch_array($results)) {
+                                                            $var = $row['registered_users'];
+                                                            echo " " .$var. " ";
+                                                        }
+                                                        ?><p>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-6">
+                                            <div class="card card-stats">
+                                            <div class="card-body ">
+                                                <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                    <p class="card-category">Purchases</p>
+                                                    <p class="card-title"><?php
+                                                        $sql = "select COUNT(id) registered_users from regal_mem_details";
+                                                        $result = mysqli_query($con, $sql) or die ("Query error!");
+                                                        while ($row = mysqli_fetch_array($result)) {
+                                                            $var = $row['registered_users'];
+                                                            echo " " .$var. " ";
+                                                        }
+                                                        ?><p>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-6">
+                                            <div class="card card-stats">
+                                            <div class="card-body ">
+                                                <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                    <i class="fas fa-users"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                    <p class="card-category">Followers</p>
+                                                    <p class="card-title">+45K<p>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
                                                             
                                                             <div class="row">
                                                                 <div class="col">
