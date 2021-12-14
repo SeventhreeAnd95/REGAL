@@ -187,46 +187,112 @@ include "../config.php";
                     <div class="container-fluid px-4 ">
                         <h2 class="mt-4" style="margin-bottom: 30px;">Dashboard</h2>
                         <hr>
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card text-black mb-4" style="height: 200px; box-shadow: 10px 10px 5px grey;background-color: #32CD32;">
-                                    <div class="card-body" style="text-align: center;"><i class="fas fa-users fa-3x"></i><strong> Total joined</strong>
-                                    <h3 style=" margin-top: 40px;">
-                                    <?php
+                        <div class="row" id="Statistics">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="card card-stats">
+                                <div class="card-body ">
+                                    <div class="row">
+                                    <div class="col-5 col-md-4">
+                                        <div class="icon-big text-center icon-warning">
+                                        <i class="fas fa-globe"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-md-8">
+                                        <div class="numbers">
+                                        <p class="card-category">Users registered</p>
+                                        <p class="card-title"><?php
                                             $sql = "select COUNT(can_id) registered_users from regal_can_details";
                                             $result = mysqli_query($con, $sql) or die ("Query error!");
                                             while ($row = mysqli_fetch_array($result)) {
                                                 $var = $row['registered_users'];
-                                                echo " " .$var. " users";
+                                                echo " " .$var. " ";
                                             }
-                                      ?>
-                                    </h3>
+                                            ?><p>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card text-black mb-4" style="height: 200px; box-shadow: 10px 10px 5px grey; background-color: #FFD294;">
-                                    <div class="card-body" style="text-align: center;"><img src="../Images/test.png" alt="Girl in a jacket" width="50px" height="50px"><strong>Test not started</strong></div>
-                                    
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="card card-stats">
+                                <div class="card-body ">
+                                    <div class="row">
+                                    <div class="col-5 col-md-4">
+                                        <div class="icon-big text-center icon-warning">
+                                        <i class="fas fa-question-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-md-8">
+                                        <div class="numbers">
+                                        <p class="card-category">Total questions</p>
+                                        <p class="card-title"><?php
+                                            $sqi = "select COUNT(id) registered_users from regal_questions_list ";
+                                            $results = mysqli_query($con, $sqi) or die ("Query error!");
+                                            while ($row = mysqli_fetch_array($results)) {
+                                                $var = $row['registered_users'];
+                                                echo " " .$var. " ";
+                                            }
+                                            ?><p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card text-black mb-4" style="height: 200px; box-shadow: 10px 10px 5px grey; background-color: #6495ED;">
-                                    <div class="card-body" style="text-align: center;"><img src="../Images/Pass.png"  alt="pass" width="50px" height="50px"><strong>Total Passed</strong></div>
-                                    
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="card card-stats">
+                                <div class="card-body ">
+                                    <div class="row">
+                                    <div class="col-5 col-md-4">
+                                        <div class="icon-big text-center icon-warning">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-md-8">
+                                        <div class="numbers">
+                                        <p class="card-category">Purchases</p>
+                                        <p class="card-title"><?php
+                                            $sql = "select COUNT(id) registered_users from regal_mem_details";
+                                            $result = mysqli_query($con, $sql) or die ("Query error!");
+                                            while ($row = mysqli_fetch_array($result)) {
+                                                $var = $row['registered_users'];
+                                                echo " " .$var. " ";
+                                            }
+                                            ?><p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card text-black mb-4" style="height: 200px; box-shadow: 10px 10px 5px grey; background-color: #ffc0cb;">
-                                    <div class="card-body" style="text-align: center;"><img src="../images/fail.png" alt="fail" width="50px" height="50px" ><strong>Total Failed</strong></div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="card card-stats">
+                                <div class="card-body ">
+                                    <div class="row">
+                                    <div class="col-5 col-md-4">
+                                        <div class="icon-big text-center icon-warning">
+                                        <i class="fas fa-users"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-md-8">
+                                        <div class="numbers">
+                                        <p class="card-category">Followers</p>
+                                        <p class="card-title">+45K<p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
-                        </div>
+                            </div>
                     </div>
                    <hr style="margin-left: 10px; margin-right: 30px;">
                    <h3 style="text-align:center" onload="getdata()" > Overview</h3>
                             <div class="container" style="margin-top: 70px; margin-bottom: 50px;"> 
                                 <div class="DataTables_wrapper"  id="getdata">
+
                                 </div>
                             </div>
                 </main>
