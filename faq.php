@@ -4,7 +4,6 @@
 session_start();
 $_SESSION['current'] = 'home';
 include("config.php");
-
 ?>
 
 <!DOCTYPE html>

@@ -53,6 +53,10 @@ include("config.php");
                  justify-content: center;
                  padding-top: 80px;
             }
+
+            .flex-container h5{
+                padding-left:20px;
+            }
             h2,h1{
                 padding-left: 30px;
                 padding-top: 40px;
@@ -98,8 +102,8 @@ include("config.php");
 
   <section>
         <div class="Regal-certified">
-            <h1> Why get Regal certified?</h1>
-            <p style="padding-top: 50px; padding-left: 40px;color: aliceblue;">Earn a well-respected credential to demonstrate IT expertise in the marketplace.</p>
+            <h1 style="text-align: center;"> Why get Regal certified?</h1>
+            <p style="padding-top: 50px; padding-left: 40px;color: aliceblue;text-align:center;">Earn a well-respected credential to demonstrate IT expertise in the marketplace.</p>
             <div class="flex-container">
                 <div>
                 <h5>Marketability</h5>
@@ -122,25 +126,25 @@ include("config.php");
         </div>
      </section>
      <section style="padding-bottom: 100px; background-image: url(images/1852725.jpg);background-size:cover; ">
-        <h2>Get Regal Certified</h2>
+        <h2 style="text-align:center;">Get Regal Certified</h2>
         <div class="flex-container" id="regal">
             <div>
                 <img src="images/oracle.png" height="200px" width="200px" style="position: relative; bottom: 40px;">
             <h5>Get your certification</h5>
                 <p>Explore certification requirements, paths you can follow to prepare for specific job roles, recommended training, exams, and more.</p>
-                <button type="button" class="btn" style=" background-color:black; margin-left: 30px; color: whitesmoke;"><a style="color: aliceblue;text-decoration:none;" href="Login.php">Get Started</a></button>
+                <button type="button" class="btn" style=" background-color:black; margin-left: 30px; color: whitesmoke; border-color:transparent;"><a style="color: aliceblue;text-decoration:none; " href="Login.php">Get Started</a></button>
             </div>
             <div>
                 <img src="images/oracle1.png" height="200px" width="200px" style="position: relative; bottom: 40px;">
             <h5>Prepare for your exam</h5>
                 <p>Preparing for your certification exam teaches you how to implement, develop and administer critical systems. Passing your exam proves you're an expert in the global IT industry.</p>
-                <button type="button" class="btn" style=" background-color:black; margin-left: 30px; color: whitesmoke;"><a style="color: aliceblue;text-decoration:none;" href="Login.php"> View Training</a></button>
+                <button type="button" class="btn" style=" background-color:black; margin-left: 30px; color: whitesmoke; border-color:transparent;"><a style="color: aliceblue;text-decoration:none;" href="Login.php"> View Training</a></button>
             </div>
             <div style="text-align: justify; height: 550px; width: 500px; margin-right: 30px; border-radius: 50px;">
                 <img src="images/oracle2.png" height="200px" width="200px" style="position: relative; bottom: 40px;">
             <h5>Take your exam</h5>
                 <p>Choose a date and register for your exam. If you're not quite ready, practice with the content by logging in and schedule your exam whenever you are ready to take it. </p>
-                <button type="button" class="btn" style=" background-color:black; margin-left: 30px; color: whitesmoke;"><a style="color: aliceblue;text-decoration:none;" href="Login.php"> Register</a></button>
+                <button type="button" class="btn" style=" background-color:black; margin-left: 30px; color: whitesmoke;border-color:transparent;"><a style="color: aliceblue;text-decoration:none;" href="Login.php"> Register</a></button>
             </div>
         </div>
     </section>
